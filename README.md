@@ -10,3 +10,15 @@ isEmpty: Returns true if stack is empty, else false.
 ## Algortihm
 
 
+
+
+
+
+
+
+
+## Conclusion
+There is no way to add or delete elements anywhere else in the stack 
+
+
+
