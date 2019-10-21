@@ -8,20 +8,24 @@ Pop: Removes an item from the stack. The items are popped in the reversed order 
 Peek or Top: Returns top element of stack.
 isEmpty: Returns true if stack is empty, else false.
 ## Algortihm
-void enqueue(int x)
-	if(rear==MAX-1)
-		print queue is full
+void push()
+	if(t==max-1)
+		print stack is full
 	else
-		rear++
-		a[rear]=x
-void dequeue()
-	if(front==-1&&front>rear)
-		print queue empty
+	t++;
+	a[t]=x;
+void pop()
+	if(t==-1)
+   print Stack is empty
 	else
-a[front]=0;
-front++
+	print a[t])
+        t--;
 void display()
-	for(i=0;i<=rear;i++)
+	int i;
+	if(t==-1)
+	print Stack is empty
+	else
+	for(i=t;i>=0;i--)
 		print a[i]
 ## Conclusion
 There is no way to add or delete elements anywhere else in the stack 
