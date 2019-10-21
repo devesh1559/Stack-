@@ -1,82 +1,90 @@
 #include<stdio.h>
-#define MAX 4
-int a[MAX];
-int i;
-int front=-1;
-int rear=-1;
-void enqueue(int x)
+#include<stdio.h>
+#define max 4
+int t=-1;
+int a[max];
+int x;
+void push()
 {
-	if(rear==MAX-1)
+	
+	if(t==max-1)
 	{
-		printf("queue is full");
+		printf("stack is full");
 	}
 	else
 	{
-		rear++;
-		a[rear]=x;
-	
+		t++;
+		a[t]=x;
+		
 	}
+	
 }
-
-void dequeue()
+void pop()
 {
-	if(front==-1&&front>rear)
+	
+	if(t==-1)
 	{
-		printf("queue empty");
+		printf("Stack is empty");
+		
 	}
 	else
 	{
-			a[front]=0;
-		front++
-		;
-	
+		
+		printf("%d",a[t]);
+		
+		t--;
 	}
 }
 void display()
 {
-	for(i=0;i<=rear;i++)
+	int i;
+	if(t==-1)
+	{
+		printf("\nStack is empty");
+	}
+	else
+	{
+	
+	for(i=t;i>=0;i--)
 	{
 		printf("%d\n",a[i]);
 	}
 }
-int main()
+}
+main()
 {
-	int f;
 	int c;
+	
 	while(1)
 	{
-	printf("Enter choice");
-	printf("1.Enqueue\n2.Dequeue\n3.Display\n4.Exit\n");
-	scanf("%d",&c);
-	switch(c)
-	{
-	case 1:
-		{
-			printf("Enter element to be insterted\n");
-			int d;
-			scanf("%d",&d);
-			enqueue(d);
-			break;
-		}
-	case 2:
-	{
-		dequeue();
-		printf("dequeue success");
-		break;
-	}
-	case 3:
-	{
-		display();
-		break;
-	}
-	case 4:
-	{
-		f=1;
-		break;
-	}	
 	
+		printf("\nEnter Your choice\n1Push\n2Pop\n3Display\n4Exit-->");
+		scanf("%d",&c);
+		switch(c)
+		{
+			case 1:
+				{
+					printf("\nEnter the number-->");
+					scanf("%d",&x);
+					push(x);
+					break;
+				}
+				case 2:
+					{
+						pop();
+						break;
+					}
+					case 3:
+						{
+							display();
+							break;
+						}
+						case 4:
+							{
+								exit(0);
+								break;
+							}
+		}
+	}
 }
-if (f==1)
-break;
-}
-}
+
